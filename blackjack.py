@@ -6,13 +6,16 @@ while bank > 0:
     # ask for initial bet (require integer)
     # create deck
     # shuffle deck
-    # create dealer hand
     # create user hand
+    # create dealer hand (with one card)
     # check for blackjack hand
+    # display output
     # ask whether stay, hit, or double
+    # display output
     # repeat until stay, double, or over 21
     # deal for computer using dealer rules
     # evaluation of which is higher, if dealer busts
-    # offer to repeat
+    # display output
+    # play again?
     # evaluation of program-ending score
     # if bank = 0, program end
