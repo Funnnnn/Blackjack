@@ -10,9 +10,9 @@ while bank > 0:
     # create dealer hand (with one card)
     # check for blackjack hand
     # display output
-    # ask whether stay, hit, or double
-    # display output
-    # repeat until stay, double, or over 21
+    while uhand <= 21
+        # whether hit, stay, or double (if first time)
+        # display output after each time choosing
     # deal for computer using dealer rules
     # evaluation of which is higher, if dealer busts
     # display output
