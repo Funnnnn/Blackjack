@@ -2,7 +2,7 @@ print('\n\nHello world!')
 print('Welcome to my game of blackjack!\n\n')
 bank = 10
 print('You have: ' + str(bank) + ' credits')
-while bank > 0:
+while play == 'true':
     # ask for initial bet (require integer)
     # create deck
     # shuffle deck
@@ -10,9 +10,10 @@ while bank > 0:
     # create dealer hand (with one card)
     # check for blackjack hand
     # display output
-    while uhand <= 21
+    while ucont -- 'true'
         # whether hit, stay, or double (if first time)
         # display output after each time choosing
+        # break if uhand value is over 21
     # deal for computer using dealer rules
     # evaluation of which is higher, if dealer busts
     # display output
