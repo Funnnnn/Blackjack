@@ -1,11 +1,12 @@
 print('\n\nHello world!')
 print('Welcome to my game of blackjack!\n\n')
+print('D = Diamonds, S = Spades, H = Hearts, C = Clubs')
 bank = 10
 play = True
 print('You have: ' + str(bank) + ' credits')
 while play:
     ucont = True
-    wager = input('How much would you like to wager? (Up to three)' : )
+    wager = input('How much would you like to wager? :')
     # create deck
     # shuffle deck
     # create user hand
@@ -20,5 +21,4 @@ while play:
     # evaluation of which is higher, if dealer busts
     # display output
     # play again?
-# evaluation of program-ending score
-# if bank = 0, program end
+    # evaluation of program-ending score
