@@ -1,9 +1,8 @@
 print('\n\nHello world!')
 print('Welcome to my game of blackjack!\n\n')
 bank = 10
-c.value = 0 # total value of cards
 print('You have: ' + str(bank) + ' credits')
-while c.value <= 21
+while bank > 0
     # ask for initial bet (require integer)
     # create deck
     # create dealer hand
