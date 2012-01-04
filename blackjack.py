@@ -10,7 +10,7 @@ while play == 'true':
     # create dealer hand (with one card)
     # check for blackjack hand
     # display output
-    while ucont -- 'true'
+    while ucont == 'true':
         # whether hit, stay, or double (if first time)
         # display output after each time choosing
         # break if uhand value is over 21
@@ -18,5 +18,5 @@ while play == 'true':
     # evaluation of which is higher, if dealer busts
     # display output
     # play again?
-    # evaluation of program-ending score
-    # if bank = 0, program end
+# evaluation of program-ending score
+# if bank = 0, program end
