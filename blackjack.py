@@ -16,7 +16,8 @@ while play:
     # shuffle deck
     # create user hand
     # create dealer hand (with one card)
-    # check for blackjack hand
+    if handvalue == 21:
+        bank = bank + int(wager) + int(wager) * 1.5
     # display output
     while ucont:
         if first:
