@@ -43,7 +43,6 @@ while play:
             else:
                 print('\nInvalid Selection')
                 continue
-        # whether hit, stay, or double (if first time)
         print("\nYour hand's current value is: " + str(handvalue) + '\n')
         if handvalue > 21:
             ucont = False
@@ -68,7 +67,7 @@ while play:
     else:
         continue
     if play == False:
-        break# play again?
+        break # play again?
 if bank == 0:
     print('\nGame over. You lost.')
 elif bank <= 10:
