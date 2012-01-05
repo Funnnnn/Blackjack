@@ -6,8 +6,12 @@ play = True
 print('You have: ' + str(bank) + ' credits\n\n')
 while play:
     handvalue = 0
-    ucont = True
+    first = True # checks whether it's the user's first move of the hand
+    ucont = True # checks whether or not the user keeps going
     wager = input('How much would you like to wager? :')
+    if int(wager) > bank:
+        print('\nYour wager cannot be more than your bank.\n')
+        continue
     # create deck
     # shuffle deck
     # create user hand
@@ -15,13 +19,22 @@ while play:
     # check for blackjack hand
     # display output
     while ucont:
+        if first and (int(wager * 2) <= bank):
+            choice = input('Hit, Stay, or Double?\n')
+            # the nested ifs go here
+            else:
+                print('Invalid Selection')
+                continue
         # whether hit, stay, or double (if first time)
-        print("Your hand's current value is: " + str(handvalue))
-        # break if uhand value is over 21
-        break
-    break
+        print("Your hand's current value is: " + str(handvalue) + '\n')
+        if handvalue > 21:
+            ucont = False
+        first = False
     # deal for computer using dealer rules
     # evaluation of which is higher, if dealer busts
     # display output
-    # play again?
+    if bank == 0:
+        play = False
+    if play == False:
+        break# play again?
     # evaluation of program-ending score
