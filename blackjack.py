@@ -19,14 +19,30 @@ while play:
     # check for blackjack hand
     # display output
     while ucont:
-        if first and (int(wager * 2) <= bank):
-            choice = input('Hit, Stay, or Double?\n')
-            # the nested ifs go here
+        if first:
+            choice = input('\nHit, Stay, or Double?\n')
+            if choice == 'Hit': # this if and these elifs need fixed
+                print('\nOkay.')
+                bank = bank - 10
+                break
+            elif choice == 'Stay':
+                print('\nYou got it, champ.')
+                bank = bank - 10
+                break
+            elif choice == 'Double':
+                if int(wager) * 2 <= bank:
+                    print('\nSure, why not.')
+                    bank = bank - 10
+                    break
+                else:
+                    print("\nYou can't do that.")
+                    bank = bank - 10
+                    break
             else:
-                print('Invalid Selection')
+                print('\nInvalid Selection')
                 continue
         # whether hit, stay, or double (if first time)
-        print("Your hand's current value is: " + str(handvalue) + '\n')
+        print("\nYour hand's current value is: " + str(handvalue) + '\n')
         if handvalue > 21:
             ucont = False
         first = False
@@ -40,6 +56,6 @@ while play:
 if bank == 0:
     print('\nGame over. You lost.')
 elif bank <= 10:
-    print('\nYour final score was ' + int(bank) + '. At least you didn't lose.')
+    print("\nYour final score was ' + int(bank) + '. At least you didn't lose.")
 else:
     print('\nYour final score was ' + int(bank) + '. Nice!')
