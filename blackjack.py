@@ -37,4 +37,9 @@ while play:
         play = False
     if play == False:
         break# play again?
-    # evaluation of program-ending score
+if bank == 0:
+    print('\nGame over. You lost.')
+elif bank <= 10:
+    print('\nYour final score was ' + int(bank) + '. At least you didn't lose.')
+else:
+    print('\nYour final score was ' + int(bank) + '. Nice!')
