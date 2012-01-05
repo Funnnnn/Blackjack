@@ -5,7 +5,8 @@ bank = 10
 play = True
 print('You have: ' + str(bank) + ' credits\n\n')
 while play:
-    handvalue = 0
+    handvalue = 0 # value of player's hand
+    dhand = 0 # value of dealer's hand
     first = True # checks whether it's the user's first move of the hand
     ucont = True # checks whether or not the user keeps going
     wager = input('How much would you like to wager? :')
@@ -49,9 +50,23 @@ while play:
         first = False
     # deal for computer using dealer rules
     # evaluation of which is higher, if dealer busts
-    # display output
+    if handvalue > dhand:
+        print('You win!')
+        bank = bank + int(wager) * 2
+    elif handvalue < dhand:
+        print('You lose!')
+    else:
+        print("It's a tie!")
+        bank = bank + int(wager)
     if bank == 0:
         play = False
+    pagain = input('Another round? y/n (if not "y" or "n", yes is assumed)"\n')
+    if pagain == 'n':
+        play = False
+    elif pagain == 'N':
+        play = False
+    else:
+        continue
     if play == False:
         break# play again?
 if bank == 0:
